@@ -81,7 +81,7 @@ static ssize_t sys_read(int fd, void* buf, size_t count)
         stdin_buf_rpos = stdin_buf_next_pos(stdin_buf_rpos);
     }
 
-    return count;
+    return num_read;
 }
 
 static ssize_t sys_write(int fd, const void* buf, size_t count)
