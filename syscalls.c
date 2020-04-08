@@ -9,7 +9,7 @@
 #include "kernel_stat.h"
 #include "interrupts.h"
 
-#define STDIN_BUF_SIZE 64
+#define STDIN_BUF_SIZE 256
 
 static uint8_t stdin_buf[STDIN_BUF_SIZE];
 static size_t stdin_buf_rpos = 0;
