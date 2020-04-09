@@ -5,7 +5,7 @@ OBJDUMP = $(TOOLCHAIN_PREFIX)-objdump
 OBJCOPY = $(TOOLCHAIN_PREFIX)-objcopy
 AR = $(TOOLCHAIN_PREFIX)-ar
 
-CFLAGS = -Wall -O2
+CFLAGS = -Wall -O2 -I$(KERNEL_DIR)
 
 KERNEL_DIR ?= .
 KERNEL_OBJECTS = $(KERNEL_DIR)/boot.o $(KERNEL_DIR)/trap.o $(KERNEL_DIR)/syscalls.o $(KERNEL_DIR)/interrupts.o $(KERNEL_DIR)/exceptions.o
