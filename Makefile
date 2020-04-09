@@ -7,7 +7,7 @@ AR = $(TOOLCHAIN_PREFIX)-ar
 CFLAGS = -Wall -O2
 ASFLAGS = $(CFLAGS)
 
-KERNEL_OBJECTS = kernel/boot.o kernel/trap.o kernel/syscalls.o kernel/interrupts.o kernel/exceptions.o
+KERNEL_OBJECTS = boot.o trap.o syscalls.o interrupts.o exceptions.o
 KERNEL_LIB = kernel.a
 
 MAIN_OBJECTS = main.o
@@ -31,4 +31,4 @@ dump: main.elf
 	$(OBJDUMP) -d $<
 
 clean:
-	rm -f $(KERNEL_OBJECTS) $(KERNEL_LIB) $(MAIN_OBJECTS) $(MAIN_EXE) main.ihex main.bin
+	rm -f $(KERNEL_OBJECTS) $(KERNEL_LIB) main.elf main.ihex main.bin

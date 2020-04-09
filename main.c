@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include "kernel/mtimer.h"
+#include "mtimer.h"
 
 int main()
 {
