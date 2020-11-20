@@ -3,7 +3,7 @@
 
 #include <stdint.h>
 
-#define MTIME    *(volatile uint64_t*)0xf0001000
-#define MTIMECMP *(volatile uint64_t*)0xf0001008
+#define MTIME    *(volatile uint64_t*)0x02000000
+#define MTIMECMP *(volatile uint64_t*)0x02000008
 
 #endif

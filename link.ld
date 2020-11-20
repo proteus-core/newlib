@@ -10,8 +10,8 @@ ENTRY(_boot)
 SECTIONS
 {
   /* Read-only sections, merged into text segment: */
-  PROVIDE (__executable_start = 0x0);
-  . = 0x0;
+  PROVIDE (__executable_start = 0x80000000);
+  . = 0x80000000;
   .interp         : { *(.interp) }
   .note.gnu.build-id  : { *(.note.gnu.build-id) }
   .hash           : { *(.hash) }
