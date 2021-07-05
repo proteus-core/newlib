@@ -63,9 +63,6 @@ SECTIONS
     *(.text .stub .text.* .gnu.linkonce.t.*)
     /* .gnu.warning sections are handled specially by elf32.em.  */
     *(.gnu.warning)
-    . = 0x20000;
-    *(.sm_text)
-  . = 0x30000;
   }
   .fini           :
   {
