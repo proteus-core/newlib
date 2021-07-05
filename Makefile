@@ -1,4 +1,4 @@
-all: main.bin main.ihex
+all: main.elf main.bin main.ihex
 
 clean:
 	rm -f *.o *.a *.elf *.bin *.ihex
