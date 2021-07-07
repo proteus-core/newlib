@@ -1,8 +1,8 @@
 #include <stdio.h>
-
-#include "mtimer.h"
+#include "performance.h"
 
 int main()
 {
-    printf("Hello, world! It took %llu cycles to boot\n", MTIME);
+    uint64_t cycles = rdcycle();
+    printf("Hello, world! It took %llu cycles to boot\n", cycles);
 }
