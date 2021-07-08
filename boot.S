@@ -5,8 +5,16 @@
 _boot:
     .option push
     .option norelax
-    la sp, _stack_start
+    .extern _end
+    la sp, _end
     .option pop
+
+    # stack size: 10KB
+    li t0, 10240
+    add sp, sp, t0
+    # align sp to 8 bytes
+    li t0, 0xfffffff8
+    and sp, sp, t0
 
     jal _init_traps
     jal _start
@@ -18,8 +26,3 @@ _halt:
     sb x2, 0(x1)
 1:
     j 1b
-
-    .data
-_stack_end:
-    .zero 10240
-_stack_start:
