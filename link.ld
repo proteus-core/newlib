@@ -116,6 +116,8 @@ SECTIONS
     __DATA_BEGIN__ = .;
     *(.data .data.* .gnu.linkonce.d.*)
     SORT(CONSTRUCTORS)
+    heap_pointer = .;
+    . += 4;
   }
   .data1          : { *(.data1) }
   .got            : { *(.got.plt) *(.igot.plt) *(.got) *(.igot) }
