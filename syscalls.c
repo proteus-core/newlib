@@ -4,6 +4,7 @@
 #include <unistd.h>
 
 #include <stdio.h>
+#include <stdbool.h>
 
 #include "chardev.h"
 #include "kernel_stat.h"
@@ -121,13 +122,21 @@ static int sys_fstat(int fd, struct kernel_stat* statbuf)
 
 long sys_brk(void* addr)
 {
-    static char heap[10240];
-    static char* brk = heap;
+    static bool sys_brk_init = false;
+    extern char* heap_pointer;
+    static char* brk;
+    if(!sys_brk_init)
+    {
+        brk = heap_pointer;
+        sys_brk_init = true;
+    }
 
     if (addr == NULL)
+    {
         return (long)brk;
+    }
 
-    if ((char*)addr >= heap && (char*)addr < heap + sizeof(heap))
+    if ((char*)addr >= heap_pointer)
     {
         brk = addr;
         return (long)brk;
@@ -169,3 +178,4 @@ __attribute__((constructor)) static void init_syscalls()
 {
     init_stdin();
 }
+
