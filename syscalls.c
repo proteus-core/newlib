@@ -35,7 +35,7 @@ static void external_interrupt_isr()
 {
     if (!stdin_buf_is_full())
     {
-        uint8_t byte = *(uint8_t*)0xf0004000;
+        uint8_t byte = *(uint8_t*)0x20000000;
         stdin_buf[stdin_buf_wpos] = byte;
         stdin_buf_wpos = stdin_buf_next_pos(stdin_buf_wpos);
     }
