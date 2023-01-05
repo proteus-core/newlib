@@ -3,7 +3,7 @@
 ## Requirements
 
 The prerequisites and the installation process for using the Newlib library is
-detailed in the [README of Proteus](https://github.com/proteus-core/proteus/README.md#building-software).
+detailed in the [README of Proteus](https://github.com/proteus-core/proteus#building-software).
 
 ## Building the example
 
