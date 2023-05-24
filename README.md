@@ -1,9 +1,8 @@
-# Newlib: stdlib implementation for Proteus
+# Board support package for Newlib on Proteus
 
 ## Requirements
 
-The prerequisites and the installation process for using the Newlib library is
-detailed in the [README of Proteus](https://github.com/proteus-core/proteus#building-software).
+The prerequisites and the installation process for using Newlib is detailed in the [README of Proteus](https://github.com/proteus-core/proteus#building-software).
 
 ## Building the example
 
