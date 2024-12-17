@@ -11,13 +11,13 @@ _boot:
     la a0, heap_pointer
     .option pop
 
-    # stack size: 10KB
-    li t0, 10240
+    # stack size: 256KB
+    li t0, 262144
     add sp, sp, t0
     # align sp to 8 bytes
     li t0, 0xfffffff8
     and sp, sp, t0
-    
+
     # initialise heap_pointer
     sw sp, 0(a0)
 
