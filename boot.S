@@ -11,8 +11,8 @@ _boot:
     la a0, heap_pointer
     .option pop
 
-    # stack size: 256KB
-    li t0, 262144
+    # stack size: 256MB
+    li t0, 268435456
     add sp, sp, t0
     # align sp to 8 bytes
     li t0, 0xfffffff8
